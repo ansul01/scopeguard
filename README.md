@@ -5,7 +5,22 @@
 [![Hackathon](https://img.shields.io/badge/AI%20First%20Hackathon-2026-6366f1?style=for-the-badge)](https://summerschool.iitjammu.ac.in)
 [![IIT Jammu](https://img.shields.io/badge/IIT%20Jammu-SS26-06b6d4?style=for-the-badge)]()
 [![Model](https://img.shields.io/badge/AI-OpenAI%20GPT--4o-10b981?style=for-the-badge)]()
+[![Team](https://img.shields.io/badge/Team-CodeCatalyst-ec4899?style=for-the-badge)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+---
+
+## 👥 Team & Registration Details
+
+- **Team Name:** CodeCatalyst
+- **Registration Number:** `EV896e63aa615213`
+- **Hackathon:** Summer School '26 — AI First Hackathon (IIT Jammu × Techible × I3C)
+
+| # | Member Name | Email | Contact |
+|---|---|---|---|
+| 1 | **Dilshan Pal Singh** (Lead) | `dilshanpal27singh@gmail.com` | +91-8899965771 |
+| 2 | **Sudhanshu Bhat** | `sudhanshubhat45@gmail.com` | +91-9906311111 |
+| 3 | **Ansul Mishra** | `ansulmishra.am@gmail.com` | +91-9439889757 |
 
 ---
 
@@ -64,4 +79,4 @@ git clone https://github.com/ansul01/scopeguard.git
 
 ## 📄 License
 
-MIT © 2026 ScopeGuard Team
+MIT © 2026 CodeCatalyst — ScopeGuard Team

@@ -1,4 +1,4 @@
-# ScopeGuard PRO — Autonomous AI Scope Monetization & Contract Enforcement Platform
+# ScopeGuard PRO — Autonomous AI Scope Creep Monetization Platform
 
 ### AI First Hackathon 2026 · Round 2 (MVP Submission)
 **Organised by:** IIT Jammu × Techible × I3C  
@@ -16,7 +16,20 @@ Freelancers, agency owners, and technical consultants lose **15%–25% of annual
 
 ---
 
-## 2. Key Features & Capabilities (PRO MVP)
+## 2. Team & Registration Details
+
+- **Team Name:** CodeCatalyst
+- **Registration Number:** EV896e63aa615213
+- **Event:** Summer School '26 — AI First Hackathon (IIT Jammu × Techible × I3C)
+
+### Roster:
+1. **Dilshan Pal Singh** (Team Lead) — `dilshanpal27singh@gmail.com` | `+91-8899965771`
+2. **Sudhanshu Bhat** — `sudhanshubhat45@gmail.com` | `+91-9906311111`
+3. **Ansul Mishra** — `ansulmishra.am@gmail.com` | `+91-9439889757`
+
+---
+
+## 3. Key Features & Capabilities (PRO MVP)
 
 | Module | Features & Capabilities |
 |---|---|
@@ -32,7 +45,7 @@ Freelancers, agency owners, and technical consultants lose **15%–25% of annual
 
 ---
 
-## 3. Technology Stack & System Architecture
+## 4. Technology Stack & System Architecture
 
 ```
 [Client Channels (Slack, Email, WhatsApp)]
@@ -59,14 +72,14 @@ Freelancers, agency owners, and technical consultants lose **15%–25% of annual
 | Component | Technology Used |
 |---|---|
 | **AI Model Kernel** | OpenAI GPT-4o (`chat/completions` API with `json_object` enforcement) + Fallback High-Precision Semantic Engine |
-| **Frontend Framework** | Pure Vanilla ES6 JavaScript, HTML5 Semantic Elements, CSS3 Custom Properties & Glassmorphism |
+| **Frontend Framework** | Pure Vanilla ES6 JavaScript, HTML5 Semantic Elements, CSS3 Custom Properties & Glassmorphic Design |
 | **Design Aesthetics** | Plus Jakarta Sans & JetBrains Mono fonts, FontAwesome 6 icons, Web Audio API sound synthesizer, Canvas Particle System |
-| **Vector Engine (Planned)** | PostgreSQL + `pgvector` for dense embedding storage |
-| **Integrations (Planned)** | Slack Bolt SDK, Gmail API Webhooks, WhatsApp Cloud API, Stripe Invoicing |
+| **Vector Engine (Roadmap)** | PostgreSQL + `pgvector` for dense embedding storage |
+| **Integrations (Roadmap)** | Slack Bolt SDK, Gmail API Webhooks, WhatsApp Cloud API, Stripe Invoicing |
 
 ---
 
-## 4. How to Evaluate & Run the App
+## 5. How to Evaluate & Run the App
 
 1. **Direct Browser Execution:** Open `index.html` in Google Chrome, Microsoft Edge, or Firefox.
 2. **1-Click Auto Demo:** Click the **"1-Click Auto Demo"** button in the hero header to instantly run a live scope audit on a sample scope creep message.
@@ -76,7 +89,7 @@ Freelancers, agency owners, and technical consultants lose **15%–25% of annual
 
 ---
 
-## 5. Repository Structure
+## 6. Repository Structure
 
 ```
 d:\PROJECTS\SS Hackthon\
@@ -90,8 +103,10 @@ d:\PROJECTS\SS Hackthon\
 
 ---
 
-## 6. Project Links
+## 7. Project Links
 
 - **GitHub Repository:** [https://github.com/ansul01/scopeguard](https://github.com/ansul01/scopeguard)
 
-*Built for AI First Hackathon 2026 · Round 2 MVP Submission*
+---
+
+*Built for AI First Hackathon 2026 · Round 2 MVP Submission · Team CodeCatalyst*
