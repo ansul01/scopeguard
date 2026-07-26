@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScopeGuard — AI Scope Creep Detector for Freelancers</title>
+  <meta name="description" content="ScopeGuard is an AI-powered tool that watches your client communications, flags scope creep in real time, and drafts polite billing replies — so you never absorb unpaid work again." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Scope<span class="logo-accent">Guard</span></span>
+      </div>
+      <nav class="nav">
+        <a href="#setup" class="nav-link">Setup</a>
+        <a href="#inbox" class="nav-link">Inbox</a>
+        <a href="#driftlog" class="nav-link">Drift Log</a>
+        <a href="#billing" class="nav-link">Billing</a>
+      </nav>
+      <div class="header-badge">
+        <span class="badge-dot"></span>
+        AI Active
+      </div>
+    </div>
+  </header>
+
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label">SS26 · AI First Hackathon · IIT Jammu</div>
+        <h1 class="hero-title">
+          AI that catches<br/>
+          <span class="gradient-text">scope creep</span><br/>
+          before it costs you.
+        </h1>
+        <p class="hero-sub">
+          Freelancers lose <strong>15–20% of billable time</strong> to scope creep they can't prove.
+          ScopeGuard watches your client messages, compares them against your signed scope,
+          and generates polite billing replies — automatically.
+        </p>
+        <div class="hero-actions">
+          <a href="#setup" class="btn btn-primary" id="hero-cta">Get Started →</a>
+          <a href="#driftlog" class="btn btn-ghost">View Demo Log</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" id="stat-checked">0</span><span class="stat-label">Messages Checked</span></div>
+          <div class="stat"><span class="stat-num" id="stat-flagged">0</span><span class="stat-label">Creep Flagged</span></div>
+          <div class="stat"><span class="stat-num" id="stat-saved">$0</span><span class="stat-label">Revenue Protected</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="terminal-title">ScopeGuard AI</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">scopeguard start</span></div>
+            <div class="terminal-line t-info">✓ Scope document loaded</div>
+            <div class="terminal-line t-info">✓ Monitoring Slack &amp; Gmail</div>
+            <div class="terminal-line t-warn" id="t-anim-1"></div>
+            <div class="terminal-line t-flag" id="t-anim-2"></div>
+            <div class="terminal-line t-ok" id="t-anim-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ───────────────────────────────────────── -->
+  <section class="how-section">
+    <div class="container">
+      <h2 class="section-title">How ScopeGuard Works</h2>
+      <p class="section-sub">Three steps. Zero dashboard-checking required.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">📄</div>
+          <h3>Upload Your Scope</h3>
+          <p>Paste your signed scope of work once. ScopeGuard builds a semantic index of every deliverable, timeline, and boundary.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">🔍</div>
+          <h3>AI Monitors Messages</h3>
+          <p>Every client message is semantically compared against your scope using Claude AI — catching casual, indirect requests that keyword rules miss.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">💸</div>
+          <h3>Flag, Log &amp; Bill</h3>
+          <p>Out-of-scope requests are timestamped in your drift log, and a polished billing-aware reply is drafted for your one-click approval.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SETUP: SCOPE UPLOAD ───────────────────────────────── -->
+  <section class="app-section" id="setup">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Step 1 — Define Your Scope</h2>
+        <p class="section-sub">Paste your signed scope document below. ScopeGuard will use it as the ground truth for every analysis.</p>
+      </div>
+
+      <!-- API Key -->
+      <div class="api-key-row">
+        <div class="form-group">
+          <label class="form-label" for="api-key-input">🔑 OpenAI API Key <span class="optional-tag">(optional — uses demo mode if empty)</span></label>
+          <input type="password" id="api-key-input" class="form-input" placeholder="sk-proj-..." autocomplete="off" />
+          <span class="form-hint">Your key is never stored. Calls go directly to OpenAI from your browser.</span>
+        </div>
+      </div>
+
+      <div class="scope-editor-card">
+        <div class="scope-editor-header">
+          <span class="scope-editor-title">📋 Scope of Work Document</span>
+          <div class="scope-editor-actions">
+            <button class="btn-sm btn-ghost-sm" id="load-sample-scope">Load Sample</button>
+            <button class="btn-sm btn-ghost-sm" id="clear-scope">Clear</button>
+          </div>
+        </div>
+        <textarea id="scope-input" class="scope-textarea" placeholder="Paste your scope of work here...
+
+Example:
+Project: Website Redesign for Acme Corp
+Duration: June 1 – July 31, 2026
+Deliverables:
+  - 5-page responsive website (Home, About, Services, Portfolio, Contact)
+  - 2 rounds of design revisions
+  - SEO meta tags setup
+  - Basic contact form with email notification
+
+Out of Scope:
+  - E-commerce / payment processing
+  - Blog or CMS setup
+  - Ongoing maintenance after go-live
+  - Video production or animation
+  - Logo redesign
+  - Social media management
+"></textarea>
+        <div class="scope-footer">
+          <div class="scope-word-count" id="scope-word-count">0 words</div>
+          <button class="btn btn-primary" id="save-scope-btn">
+            <span>✓ Save &amp; Activate Scope</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="scope-saved-banner" id="scope-saved-banner" style="display:none">
+        <span class="banner-icon">🟢</span>
+        <span>Scope activated! ScopeGuard is now monitoring all incoming messages against this document.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INBOX ─────────────────────────────────────────────── -->
+  <section class="app-section alt-section" id="inbox">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Step 2 — Incoming Client Messages</h2>
+        <p class="section-sub">Simulate or paste client messages to let ScopeGuard analyse them in real time.</p>
+      </div>
+
+      <div class="inbox-layout">
+        <!-- Message Composer -->
+        <div class="composer-card">
+          <div class="composer-header">
+            <span class="composer-icon">✉️</span>
+            <span>New Client Message</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="client-name">Client Name</label>
+            <input type="text" id="client-name" class="form-input" value="Sarah (Acme Corp)" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="channel-select">Channel</label>
+            <select id="channel-select" class="form-input">
+              <option value="slack">Slack</option>
+              <option value="email">Email</option>
+              <option value="whatsapp">WhatsApp</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message-input">Message</label>
+            <textarea id="message-input" class="composer-textarea" placeholder="Paste the client message here..."></textarea>
+          </div>
+          <div class="composer-actions">
+            <button class="btn-sm btn-ghost-sm" id="load-sample-messages-btn">Load Samples</button>
+            <button class="btn btn-primary" id="analyse-btn">
+              <span id="analyse-btn-text">🔍 Analyse Message</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sample messages panel -->
+        <div class="samples-panel" id="samples-panel" style="display:none">
+          <div class="samples-header">Sample Messages — click to load</div>
+          <div class="sample-msgs" id="sample-msgs-list"></div>
+        </div>
+
+        <!-- Analysis Result -->
+        <div class="result-card" id="result-card" style="display:none">
+          <div class="result-header">
+            <span class="result-verdict-icon" id="result-icon"></span>
+            <div>
+              <div class="result-verdict" id="result-verdict"></div>
+              <div class="result-sub" id="result-sub"></div>
+            </div>
+            <div class="result-confidence" id="result-confidence"></div>
+          </div>
+          <div class="result-body">
+            <div class="result-section">
+              <div class="result-label">AI Reasoning</div>
+              <div class="result-text" id="result-reasoning"></div>
+            </div>
+            <div class="result-section" id="reply-section" style="display:none">
+              <div class="result-label">Suggested Reply <span class="draft-tag">AI Draft</span></div>
+              <div class="reply-box" id="result-reply"></div>
+              <div class="reply-actions">
+                <button class="btn-sm btn-primary-sm" id="copy-reply-btn">📋 Copy Reply</button>
+                <button class="btn-sm btn-ghost-sm" id="add-to-log-btn">➕ Add to Drift Log</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message history -->
+      <div class="message-history" id="message-history"></div>
+    </div>
+  </section>
+
+  <!-- ── DRIFT LOG ──────────────────────────────────────────── -->
+  <section class="app-section" id="driftlog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Drift Log</h2>
+          <p class="section-sub">Every out-of-scope request, timestamped and ready to bill.</p>
+        </div>
+        <div class="log-actions">
+          <button class="btn-sm btn-ghost-sm" id="load-demo-log">Load Demo Data</button>
+          <button class="btn-sm btn-ghost-sm" id="clear-log-btn">Clear Log</button>
+          <button class="btn btn-primary" id="export-btn">📤 Export Report</button>
+        </div>
+      </div>
+
+      <div class="log-summary-row" id="log-summary-row">
+        <div class="log-stat-card">
+          <div class="log-stat-num" id="log-total">0</div>
+          <div class="log-stat-label">Total Items</div>
+        </div>
+        <div class="log-stat-card">
+          <div class="log-stat-num" id="log-unbilled">0</div>
+          <div class="log-stat-label">Unbilled</div>
+        </div>
+        <div class="log-stat-card">
+          <div class="log-stat-num" id="log-hours">0h</div>
+          <div class="log-stat-label">Est. Extra Hours</div>
+        </div>
+        <div class="log-stat-card highlight-card">
+          <div class="log-stat-num" id="log-revenue">$0</div>
+          <div class="log-stat-label">Revenue at Risk</div>
+        </div>
+      </div>
+
+      <div class="log-table-wrapper">
+        <table class="log-table" id="log-table">
+          <thead>
+            <tr>
+              <th>Date/Time</th>
+              <th>Client</th>
+              <th>Channel</th>
+              <th>Request Summary</th>
+              <th>Severity</th>
+              <th>Est. Hours</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="log-tbody">
+            <tr class="log-empty-row" id="log-empty-row">
+              <td colspan="8">
+                <div class="log-empty">
+                  <div class="log-empty-icon">📭</div>
+                  <div>No scope creep detected yet.</div>
+                  <div class="log-empty-sub">Analyse messages in Step 2, or load demo data.</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BILLING SUMMARY ───────────────────────────────────── -->
+  <section class="app-section alt-section" id="billing">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Billing Summary</h2>
+        <p class="section-sub">Generate a professional change-order document to send your client.</p>
+      </div>
+
+      <div class="billing-layout">
+        <div class="billing-config">
+          <div class="form-group">
+            <label class="form-label" for="hourly-rate">Your Hourly Rate ($)</label>
+            <input type="number" id="hourly-rate" class="form-input" value="75" min="1" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="project-name">Project Name</label>
+            <input type="text" id="project-name" class="form-input" value="Website Redesign for Acme Corp" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="freelancer-name">Your Name / Business</label>
+            <input type="text" id="freelancer-name" class="form-input" value="Alex Design Studio" />
+          </div>
+          <button class="btn btn-primary w-full" id="generate-bill-btn">Generate Change Order</button>
+        </div>
+
+        <div class="billing-preview" id="billing-preview">
+          <div class="preview-placeholder">
+            <div class="preview-icon">📑</div>
+            <div>Configure the fields and click <strong>Generate Change Order</strong> to create your billing document.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TECH STACK ─────────────────────────────────────────── -->
+  <section class="tech-section">
+    <div class="container">
+      <h2 class="section-title">Technology Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">🤖</div>
+          <div class="tech-name">OpenAI GPT-4o</div>
+          <div class="tech-desc">Semantic scope comparison, classification &amp; reply drafting</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🗄️</div>
+          <div class="tech-name">pgvector RAG</div>
+          <div class="tech-desc">Retrieval-augmented matching against the scope document</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">⚡</div>
+          <div class="tech-name">React + FastAPI</div>
+          <div class="tech-desc">Responsive frontend with a high-performance Python backend</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🔗</div>
+          <div class="tech-name">Slack &amp; Gmail API</div>
+          <div class="tech-desc">Real-time monitoring of the channels freelancers already use</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="logo">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">Scope<span class="logo-accent">Guard</span></span>
+        </div>
+        <div class="footer-tagline">AI that catches scope creep before it costs you your billable hours.</div>
+      </div>
+      <div class="footer-bottom">
+        <span>Built for AI First Hackathon 2026 · SS26 · IIT Jammu × Techible × I3C</span>
+        <span>Track: Open Innovation — Build the Next AI Startup</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── TOAST ─────────────────────────────────────────────── -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ── MODAL: Change Order ────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-overlay" style="display:none">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">📑 Change Order Document</div>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="modal-copy-btn">📋 Copy to Clipboard</button>
+        <button class="btn btn-ghost" id="modal-close2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
