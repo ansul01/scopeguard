@@ -1,0 +1,113 @@
+================================================================================
+          SCOPEGUARD — DEMO VIDEO WALKTHROUGH & SCRIPT GUIDE
+================================================================================
+Project: ScopeGuard (Autonomous AI Scope Creep Monetization Platform)
+Team: CodeCatalyst (Reg No: EV896e63aa615213)
+Target Video Duration: 2 to 3 Minutes
+Recommended Recording Tool: OBS Studio, Loom, or Windows Game Bar (Win + G)
+
+================================================================================
+                           PART 1: VIDEO STRUCTURE & TIMELINE
+================================================================================
+
+[0:00 - 0:30] ── 1. Introduction & The Problem Statement
+[0:30 - 1:00] ── 2. Industry Presets & Contract Clause Engine
+[1:00 - 1:45] ── 3. Live AI Message Interceptor Demo (Slack / Email)
+[1:45 - 2:30] ── 4. Scope Drift Matrix & Automated Change Order Generation
+[2:30 - 2:55] ── 5. Architecture, Market Impact & Closing
+
+================================================================================
+                   PART 2: STEP-BY-STEP SPEAKING SCRIPT & SCREEN ACTIONS
+================================================================================
+
+--------------------------------------------------------------------------------
+SECTION 1: INTRODUCTION & THE PROBLEM STATEMENT (0:00 - 0:30)
+--------------------------------------------------------------------------------
+[SCREEN ACTION]: Open index.html in full screen. Start at the top Hero Section.
+Hover over the live statistics cards (Messages Audited, Creep Intercepted, Revenue).
+
+[WHAT TO SAY]:
+"Hello judges and participants! We are Team CodeCatalyst, and today we are excited to present ScopeGuard — an autonomous AI agent designed to catch and monetize scope creep in real time.
+
+Did you know freelancers and small agencies lose 15% to 25% of their billable revenue every year to silent scope creep? Clients casually ask for extra features over Slack or email like 'Could you also add a small blog?' — which keyword rules miss and freelancers absorb unpaid. 
+
+ScopeGuard solves this by acting as a real-time semantic guardrail between client messages and your signed contract."
+
+--------------------------------------------------------------------------------
+SECTION 2: INDUSTRY PRESET PROFILES & CONTRACT ENGINE (0:30 - 1:00)
+--------------------------------------------------------------------------------
+[SCREEN ACTION]: Scroll down to 'Step 1 — Contract Scope & AI Guardrails'.
+Click between the preset cards: 'Acme Corp Web Redesign', 'FinTech Mobile App', and 'SaaS Growth'.
+Show how the 'Active Scope Inspector' updates automatically with green (In-Scope Deliverables) and red (Exclusions) tags.
+
+[WHAT TO SAY]:
+"ScopeGuard starts by ingesting the signed Scope of Work. Here in Step 1, our Ground Truth Engine extracts deliverables and exclusions into indexed vector tags. 
+
+We built preset profiles for Web Design, Mobile Apps, and Marketing. For example, in our Web Redesign profile, 5-page design and 2 revision rounds are IN-SCOPE, while E-commerce and Blog/CMS setup are explicitly OUT-OF-SCOPE.
+
+You can also adjust the AI Strictness Sensitivity slider depending on how strictly you want your contract boundaries enforced."
+
+--------------------------------------------------------------------------------
+SECTION 3: LIVE AI MESSAGE INTERCEPTOR DEMO (1:00 - 1:45)
+--------------------------------------------------------------------------------
+[SCREEN ACTION]: Scroll to 'Step 2 — Real-Time Message Analysis'.
+Click the '1-Click Auto Demo' button (or select the first red chip: '🔴 Blog/CMS Request').
+Click 'Audit Scope Creep'. Watch the terminal animation and the verdict card populate.
+Highlight:
+  - Verdict: OUT OF SCOPE (🚨 96% Confidence)
+  - Risk Level: High Risk | Est. Hours: 8 Hours | Billable Value: $600.00
+  - AI Semantic Reasoning
+  - AI Drafted Client Response box
+
+[WHAT TO SAY]:
+"Now let's test a real-world client scenario. The client sends a message on Slack: 'The design looks super clean! Could we add a small blog section so I can publish weekly updates?'
+
+When we click 'Audit Scope Creep', ScopeGuard sends this payload to our OpenAI GPT-4o engine. 
+
+Notice how GPT-4o recognizes that 'adding a blog' violates the exclusion clause. It flags it as OUT OF SCOPE with 96% confidence, calculates an estimated 8 hours of extra effort worth $600, and instantly auto-drafts a polite, professional reply explaining that this feature requires a change order."
+
+--------------------------------------------------------------------------------
+SECTION 4: SCOPE DRIFT MATRIX & CHANGE ORDER GENERATION (1:45 - 2:30)
+--------------------------------------------------------------------------------
+[SCREEN ACTION]: 
+1. Click the green 'Log & Monetize Item' button under the reply draft.
+2. The page automatically scrolls to 'Step 3 — Scope Drift Log & Protection'.
+3. Show the KPI summary cards (Unbilled Work Hours, Protectable Revenue).
+4. Scroll down to 'Step 4 — Automated Revenue Recovery' and click 'Generate Official Change Order'.
+5. The Change Order modal opens showing the formal document.
+
+[WHAT TO SAY]:
+"With one click, we hit 'Log & Monetize Item'. This adds the out-of-scope request into our Scope Drift Matrix, updating our KPI metrics to show $600 in protectable revenue.
+
+Finally, in Step 4, ScopeGuard transforms these unbilled items into a formal Change Order Document with a single click. This document itemizes the extra requests, calculates the hourly billing total, and provides a formal authorization signature block ready to send to the client for e-signature."
+
+--------------------------------------------------------------------------------
+SECTION 5: ARCHITECTURE, MARKET IMPACT & CONCLUSION (2:30 - 2:55)
+--------------------------------------------------------------------------------
+[SCREEN ACTION]: Scroll down to the Footer & Architecture grid. Show the tech cards (GPT-4o, pgvector RAG, Omni-Channel Webhooks).
+
+[WHAT TO SAY]:
+"ScopeGuard is powered by OpenAI GPT-4o, built with a pgvector RAG architecture for dense contract matching, and designed to plug natively into Slack, Gmail, and WhatsApp Business webhooks with human-in-the-loop safety.
+
+ScopeGuard turns invisible scope creep into documented, billable revenue. Thank you for your time, and we look forward to your feedback!"
+
+================================================================================
+                       PART 3: KEY HIGHLIGHTS TO EMPHASIZE
+================================================================================
+
+1. AI INTEGRATION: Emphasize that ScopeGuard uses semantic reasoning (GPT-4o), NOT rigid keyword matching. It understands casual human phrasing like "Could you also just quickly..."
+2. HUMAN-IN-THE-LOOP: Point out that no client messages are sent automatically without freelancer approval to preserve business relationships.
+3. INSTANT ROI: Show how $600 of lost revenue was recovered in under 10 seconds.
+4. DEMO MODE: Remind judges that ScopeGuard runs smoothly both offline with its built-in engine and live with an OpenAI API key.
+
+================================================================================
+                         PART 4: PRO RECORDING TIPS
+================================================================================
+
+- Keep browser zoom at 100% or 90% so all cards are clearly visible.
+- Keep audio clear and enthusiastic.
+- Click the '1-Click Auto Demo' button to keep your screen flow smooth.
+- Have your repository URL ready: https://github.com/ansul01/scopeguard
+
+Good luck with your demo video recording! Team CodeCatalyst 🚀
+================================================================================
