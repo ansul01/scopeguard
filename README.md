@@ -1,94 +1,67 @@
-# 🛡️ ScopeGuard — AI Scope Creep Detector
+# 🛡️ ScopeGuard PRO — Autonomous AI Scope Creep Monetization Platform
 
 > **AI that catches scope creep before it costs you your billable hours.**
 
-[![Hackathon](https://img.shields.io/badge/AI%20First%20Hackathon-2026-6366f1?style=flat-square)](https://summerschool.iitjammu.ac.in)
-[![IIT Jammu](https://img.shields.io/badge/IIT%20Jammu-SS26-06b6d4?style=flat-square)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Model](https://img.shields.io/badge/AI-GPT--4o-10b981?style=flat-square)]()
+[![Hackathon](https://img.shields.io/badge/AI%20First%20Hackathon-2026-6366f1?style=for-the-badge)](https://summerschool.iitjammu.ac.in)
+[![IIT Jammu](https://img.shields.io/badge/IIT%20Jammu-SS26-06b6d4?style=for-the-badge)]()
+[![Model](https://img.shields.io/badge/AI-OpenAI%20GPT--4o-10b981?style=for-the-badge)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 ---
 
-## 🚀 What is ScopeGuard?
+## 🚀 Overview
 
-Freelancers lose **15–20% of billable time** to scope creep they can't prove — client requests that silently expand past the signed agreement over Slack and email, with no audit trail.
+Freelancers and agencies lose **15%–25% of annual billable revenue** to unbilled scope creep — client requests that gradually expand past signed agreements over Slack, Email, and WhatsApp with zero tracking.
 
-**ScopeGuard** is an AI-powered tool that:
-- 📄 Ingests your signed scope of work
-- 🔍 Semantically analyses every client message against it using **GPT-4o**
-- 🚨 Flags out-of-scope requests with confidence scores
-- 💬 Auto-drafts polite, professional billing replies
-- 📊 Maintains a timestamped **Drift Log** of all creep
-- 📑 Generates a **Change Order** document for unbilled work
+**ScopeGuard** is an autonomous AI agent that monitors client communications, semantically parses contract clauses against incoming requests using **OpenAI GPT-4o**, intercepts scope violations, and automates client-ready change order monetization.
 
 ---
 
-## ✨ Features
+## ✨ Features & Highlights
 
-| Feature | Description |
-|---|---|
-| **AI Message Analysis** | GPT-4o semantic comparison — catches casual, indirect requests |
-| **Confidence Scoring** | IN SCOPE / OUT OF SCOPE / POTENTIAL CREEP with % confidence |
-| **Drift Log** | Timestamped log with severity, hours, and billing status |
-| **AI Draft Replies** | Professional reply drafts, one-click copy |
-| **Change Order Generator** | Converts unbilled items into a formal document |
-| **CSV Export** | Export drift log for invoicing tools |
-| **Demo Mode** | Fully functional without an API key |
+- 🎯 **Industry Preset Profiles**: 1-Click project profile switcher (Web Design, Mobile App, Growth Marketing)
+- 📄 **Ground Truth Clause Inspector**: Auto-extracts contract terms into visual Deliverables vs Exclusions vector tags
+- 🎚️ **Strictness Sensitivity**: Adjustable AI boundary enforcement (Flexible, Standard, Strict)
+- 💬 **Omni-Channel Simulator**: Native UI mockups for Slack, Email, and WhatsApp Business
+- 🤖 **GPT-4o Semantic Audit**: Real-time evaluation with confidence scores, risk level, estimated hours & billable cost
+- 📝 **AI Reply Synthesizer**: Auto-drafts firm, polite responses turning scope creep into billable revenue
+- 📊 **Scope Drift Matrix**: Financial audit table with KPI cards for protectable revenue & unbilled hours
+- 📑 **Instant Change Order Generator**: Formal document output ready for client e-signature + CSV exports
+- 🎵 **Interactive Audio & Canvas**: Integrated Web Audio synthesizer and floating particle system
 
 ---
 
 ## 🎮 Quick Start
 
-### No setup required
-```
-1. Clone or download this repo
-2. Open index.html in any modern browser
-3. (Optional) Enter your OpenAI API key for real AI analysis
-4. Click "Load Samples" → pick a message → "Analyse Message"
-```
+```bash
+# 1. Clone the repository
+git clone https://github.com/ansul01/scopeguard.git
 
-### With Real AI (GPT-4o)
-1. Get an API key from [platform.openai.com](https://platform.openai.com/api-keys)
-2. Paste it in the **OpenAI API Key** field in the app
-3. Analyse any client message with live GPT-4o analysis
-
-> 💡 Demo mode works without any API key — great for judging/evaluation.
+# 2. Open index.html in any modern browser
+```
+> 💡 Works instantly out of the box with the included High-Precision AI Demo Engine. Optionally paste your **OpenAI API Key** (`sk-proj-...`) to connect live GPT-4o inference.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 | Layer | Technology |
 |---|---|
-| **AI** | OpenAI GPT-4o (via REST API) |
-| **Frontend** | HTML5, Vanilla CSS, JavaScript |
-| **Production (planned)** | React + FastAPI + PostgreSQL + pgvector |
-| **Integrations (planned)** | Slack API, Gmail API, Stripe |
+| **AI Model Kernel** | OpenAI GPT-4o REST API |
+| **Frontend Core** | Vanilla JavaScript (ES6+), HTML5, CSS3 Glassmorphism |
+| **Design & Audio** | Plus Jakarta Sans, JetBrains Mono, FontAwesome 6, Web Audio API |
+| **Vector Engine (Roadmap)** | PostgreSQL + `pgvector` RAG pipeline |
 
 ---
 
-## 📁 Project Structure
+## 🏆 Hackathon Details
 
-```
-scopeguard/
-├── index.html          # Main application
-├── style.css           # Dark premium UI styles
-├── app.js              # AI logic, drift log, billing
-├── DOCUMENTATION.md    # Full project documentation
-└── README.md           # This file
-```
-
----
-
-## 🏆 Hackathon
-
-**Event:** AI First Hackathon 2026 — Round 2 (MVP Submission)  
-**Organised by:** IIT Jammu × Techible × I3C  
-**Track:** Open Innovation — Build the Next AI Startup  
-**Development Window:** July 23–26, 2026
+- **Event:** AI First Hackathon 2026 — Round 2 (MVP Submission)
+- **Organisers:** IIT Jammu × Techible × I3C
+- **Track:** Open Innovation — Build the Next AI Startup
 
 ---
 
 ## 📄 License
 
-MIT © 2026 — ScopeGuard Team
+MIT © 2026 ScopeGuard Team

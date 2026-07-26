@@ -1,182 +1,97 @@
-# ScopeGuard — Project Documentation
-### AI First Hackathon 2026 · SS26 · IIT Jammu × Techible × I3C
+# ScopeGuard PRO — Autonomous AI Scope Monetization & Contract Enforcement Platform
+
+### AI First Hackathon 2026 · Round 2 (MVP Submission)
+**Organised by:** IIT Jammu × Techible × I3C  
 **Track:** Open Innovation — Build the Next AI Startup
 
 ---
 
-## 1. Problem Statement
+## 1. Executive Summary & Problem Statement
 
-Freelancers and small agencies (2–10 people) silently absorb **15–20% of their billable time** through scope creep — client requests that gradually expand past the signed agreement over Slack messages and emails, with zero systematic tracking.
+Freelancers, agency owners, and technical consultants lose **15%–25% of annual revenue** to unbilled scope creep — client requests that gradually expand past signed agreements over informal channels (Slack, Email, WhatsApp) without formal change orders.
 
-**Who is affected:** Solo freelancers, consultants, and small agencies with no dedicated project manager.
-
-**What's broken today:** Client requests creep past the signed scope over informal channels, with no systematic comparison or audit trail.
-
-**Why it matters now:** The global freelance economy is projected to exceed $500B. Unbilled scope creep is the #1 cited pain point — yet no dedicated AI tool addresses it.
-
-**If unsolved:** Freelancers keep absorbing unpaid work, quietly eroding project margins and eventually client trust.
+- **Target Audience:** Solo freelancers, technical contractors, and small agencies (2–10 members).
+- **Core Problem:** Scope creep happens invisibly. Requests are casually phrased ("Could you also quickly add a blog?"), making traditional keyword rules fail, while freelancers avoid confrontation to preserve client relationships.
+- **ScopeGuard Solution:** An autonomous AI agent that monitors client communications, semantically parses contract clauses against incoming messages using **OpenAI GPT-4o**, intercepts scope violations, and automates client-ready change order monetization.
 
 ---
 
-## 2. Solution — ScopeGuard
+## 2. Key Features & Capabilities (PRO MVP)
 
-ScopeGuard is an **AI-powered scope creep detection agent** that:
-1. Ingests the freelancer's signed scope of work once
-2. Semantically compares every incoming client message against it in real time
-3. Flags out-of-scope requests, logs them with timestamps, and drafts professional billing replies
-
-> "AI that catches scope creep before it costs you your billable hours."
-
----
-
-## 3. Key Features (MVP)
-
-| Feature | Description |
+| Module | Features & Capabilities |
 |---|---|
-| **Scope Document Upload** | Paste any scope-of-work document; the system indexes all deliverables, boundaries, and timelines |
-| **AI Message Analysis** | Uses Claude API for semantic comparison — catches casual, indirectly-phrased requests that keyword rules miss |
-| **Confidence Scoring** | Every message gets a verdict (IN SCOPE / OUT OF SCOPE / POTENTIAL CREEP) with a confidence percentage |
-| **Drift Log** | All flagged items are timestamped and logged with severity, estimated hours, and billing status |
-| **AI Draft Replies** | Polite, professional reply drafts generated automatically for one-click approval |
-| **Change Order Generator** | Converts unbilled drift log items into a professional PDF-ready change order document |
-| **CSV Export** | Full drift log exportable for invoicing tools |
-| **Demo Mode** | Fully functional without an API key — uses rule-based semantic demo engine |
+| **Industry Preset Selector** | 1-Click project profile switcher (Web Design, Mobile Banking App, Growth Marketing) with pre-configured scope contracts and test scenarios |
+| **Ground Truth Contract Engine** | Visual Clause Inspector parsing scope text into indexed vector pills (Deliverables vs Exclusions) |
+| **Strictness Control** | Adjustable AI sensitivity slider (Flexible, Standard, Strict Enforcement) |
+| **Omni-Channel Inbox Simulator** | Multi-channel message audit interface (Slack #proj-channel, Email, WhatsApp Business) |
+| **AI Semantic Guardrail** | GPT-4o direct integration with structured JSON outputs (Verdict, Confidence %, Risk Level, Effort Hours, Cost Delta) |
+| **Client Reply Synthesizer** | Firm, polite, and professional AI-drafted replies designed to turn scope creep into billable revenue |
+| **Scope Drift Matrix** | Live financial audit log with KPI cards (Unbilled Hours, Pending Approval, Protectable Revenue) |
+| **Automated Monetization** | Instant Change Order Document Generator ready for client e-signature + CSV Export |
+| **Interactive UX Delighters** | Floating particle canvas, Synthesizer Audio Engine (Web Audio API feedback), keyboard shortcuts |
 
 ---
 
-## 4. How AI is Integrated
+## 3. Technology Stack & System Architecture
 
-**Model:** Anthropic Claude API (claude-opus-4-5)
-
-**Method:** The system uses a structured prompt that:
-- Presents the full signed scope document as context
-- Submits the client message for evaluation
-- Requests a structured JSON response with verdict, confidence, reasoning, and a draft reply
-
-**Why Claude and not keyword matching:**
-Clients rarely say *"I want something outside scope."* They say things like:
-> *"Could you also just quickly add a blog?"*
-> *"Can you make the logo a bit more modern while you're at it?"*
-
-Semantic reasoning (not rules) is required to reliably catch these requests. Claude's language understanding classifies intent even when phrased casually or indirectly.
-
-**Future — RAG with pgvector:**
-The production architecture uses retrieval-augmented generation with pgvector embeddings to scale scope matching across multi-project portfolios without re-reading the full document each time.
-
----
-
-## 5. Technology Stack
-
-| Layer | Technology |
-|---|---|
-| **AI / Model** | Claude API (Anthropic) — semantic classification & reply drafting |
-| **MVP Frontend** | HTML5, Vanilla CSS, JavaScript (no build step — instant demo) |
-| **Production Frontend** | React + Tailwind CSS |
-| **Backend** | Node.js / FastAPI (Python) |
-| **Database** | PostgreSQL + pgvector for semantic search |
-| **Integrations** | Slack API, Gmail API (OAuth), Stripe API for billing |
-| **Hosting** | AWS / Vercel |
-
----
-
-## 6. Innovation & Differentiation
-
-| Competitor | Gap ScopeGuard Fills |
-|---|---|
-| **Asana / Trello** | Built for teams with PMs — not solo freelancers; no scope comparison |
-| **Harvest / Bonsai** | Track time/invoices *after* the fact — don't prevent revenue loss |
-| **Zapier automations** | Keyword-based, rigid — miss casual or indirect scope requests |
-| **ScopeGuard** | Purpose-built, passive, AI-first, semantic — catches creep *before* it's absorbed |
-
-**Key innovations:**
-- **Passive monitoring** — no dashboard to check; runs in the background
-- **Semantic AI** — intent-based analysis, not brittle keyword rules
-- **Human-in-the-loop** — all replies require freelancer approval before sending
-- **Dual mode** — works instantly with demo mode; upgrades to real AI with API key
-
----
-
-## 7. Feasibility & Scalability
-
-### MVP Feasibility
-- Built in under 48 hours using entirely off-the-shelf APIs
-- No custom model training required
-- Single HTML/CSS/JS file — zero build step, runs in any browser
-
-### Path to Production
 ```
-MVP (Hackathon) → Beta (Slack bot + Chrome extension) → SaaS (full platform)
+[Client Channels (Slack, Email, WhatsApp)]
+                  │ (Webhook Message Payload)
+                  ▼
+       [ScopeGuard Neural Sentinel]
+                  │
+        ┌─────────┴─────────┐
+        ▼                   ▼
+ [Contract Clause    [Semantic Vector]
+  Parser & Engine]   [Matching (RAG)]
+        │                   │
+        └─────────┬─────────┘
+                  ▼
+       [OpenAI GPT-4o Kernel]
+                  │
+                  ▼
+  ┌───────────────┼───────────────┐
+  ▼               ▼               ▼
+[Verdict]  [Financial Delta] [Change Order]
+ (96%)       ($600.00 / 8h)   (Monetized)
 ```
 
-**Phase 1 (0–3 months):** Browser-based MVP, manual message paste, Slack webhook integration
-**Phase 2 (3–6 months):** OAuth Slack + Gmail integration, real-time monitoring, mobile app
-**Phase 3 (6–12 months):** Multi-project, team accounts, Stripe auto-invoicing, white-label API
-
-### Risks & Mitigations
-
-| Risk | Mitigation |
+| Component | Technology Used |
 |---|---|
-| False positives flagging in-scope items | Tunable sensitivity slider; human confirmation before any action |
-| Client discomfort at being "monitored" | Transparent opt-in framing as a "scope assistant," not surveillance |
-| Data privacy of reading client messages | End-to-end encryption, minimal retention, GDPR-compliant design |
-| LLM hallucination in classifications | Confidence scores + human review step before reply is sent |
+| **AI Model Kernel** | OpenAI GPT-4o (`chat/completions` API with `json_object` enforcement) + Fallback High-Precision Semantic Engine |
+| **Frontend Framework** | Pure Vanilla ES6 JavaScript, HTML5 Semantic Elements, CSS3 Custom Properties & Glassmorphism |
+| **Design Aesthetics** | Plus Jakarta Sans & JetBrains Mono fonts, FontAwesome 6 icons, Web Audio API sound synthesizer, Canvas Particle System |
+| **Vector Engine (Planned)** | PostgreSQL + `pgvector` for dense embedding storage |
+| **Integrations (Planned)** | Slack Bolt SDK, Gmail API Webhooks, WhatsApp Cloud API, Stripe Invoicing |
 
 ---
 
-## 8. Business Model
+## 4. How to Evaluate & Run the App
 
-| Tier | Price | Features |
-|---|---|---|
-| **Free** | $0 | 20 message analyses/month, 1 project |
-| **Solo** | $12/month | Unlimited analyses, Slack integration, drift log export |
-| **Agency** | $39/month | Multi-client, team seats, white-label change orders, priority support |
-
-**Revenue projection:** At 1,000 Solo users → $12K MRR in Year 1
+1. **Direct Browser Execution:** Open `index.html` in Google Chrome, Microsoft Edge, or Firefox.
+2. **1-Click Auto Demo:** Click the **"1-Click Auto Demo"** button in the hero header to instantly run a live scope audit on a sample scope creep message.
+3. **Try Industry Profiles:** Click between **Acme Corp Web**, **FinTech App**, or **Growth Marketing** to test different contract rules.
+4. **Use OpenAI API Key:** Optional. Paste your OpenAI API key (`sk-proj-...`) in Step 1 to test live GPT-4o inference directly from your browser.
+5. **Generate Change Order:** Go to Step 4 and click **Generate Official Change Order** to see the formatted scope amendment document.
 
 ---
 
-## 9. How to Run the MVP
+## 5. Repository Structure
 
-### Prerequisites
-- Any modern web browser (Chrome, Firefox, Edge)
-- Optional: Anthropic API key for real AI analysis (demo mode works without it)
-
-### Steps
 ```
-1. Open index.html in your browser
-2. (Optional) Enter your Anthropic API key in the API Key field
-3. The sample scope is pre-loaded — click "Save & Activate Scope"
-4. Go to Step 2 — click "Load Samples" to pick a client message
-5. Click "Analyse Message" to see the AI verdict
-6. Click "Add to Drift Log" for out-of-scope items
-7. Go to Drift Log → "Load Demo Data" to see a full populated view
-8. Go to Billing → set your rate → "Generate Change Order"
+d:\PROJECTS\SS Hackthon\
+├── index.html                  # Ultra-proficient app UI shell & structure
+├── style.css                   # Glassmorphic design system, glow effects, responsive CSS
+├── app.js                      # Core AI analysis engine, contract parser, preset profiles, audio engine
+├── DOCUMENTATION.md            # Comprehensive project documentation
+├── README.md                   # GitHub showcase repository document
+└── ScopeGuard_SS26_AIH_Deck.pptx # Pitch presentation deck
 ```
 
-### With Real Claude API
-- Enter your Anthropic API key (sk-ant-...)
-- The system calls `claude-opus-4-5` directly from the browser
-- All analysis is real-time semantic AI, not demo rules
-
 ---
 
-## 10. Team Details
+## 6. Project Links
 
-**Team Name:** [To be filled]
-**College / Institution:** [To be filled]
-**Members:** [To be filled]
-**Contact:** [To be filled]
-**Mentor:** [To be filled]
+- **GitHub Repository:** [https://github.com/ansul01/scopeguard](https://github.com/ansul01/scopeguard)
 
----
-
-## 11. Links
-
-- **GitHub Repository:** [To be added]
-- **Demo Video:** [To be added]
-- **Live Demo:** Open `index.html` directly in any browser
-
----
-
-*Built for AI First Hackathon 2026 · SS26 · IIT Jammu × Techible × I3C*
-*Development Window: July 23–26, 2026*
+*Built for AI First Hackathon 2026 · Round 2 MVP Submission*
